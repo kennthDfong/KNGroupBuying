@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KNRegionViewController">
+            <connections>
+                <outlet property="mainTableVIew" destination="ltV-uf-Wzy" id="pTm-l4-s6b"/>
+                <outlet property="subTableVIew" destination="7aC-iu-lAz" id="uTA-Mo-kXr"/>
+                <outlet property="view" destination="xpU-7U-PCP" id="aKY-bU-Z9d"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="xpU-7U-PCP">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="540"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vgj-hh-mGz" userLabel="顶部视图">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_filter_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="RnE-cM-B9w">
+                            <rect key="frame" x="280" y="0.0" width="40" height="40"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="HEY-xv-Uw9"/>
+                                <constraint firstAttribute="width" constant="40" id="HLq-sl-vFl"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THQ-QE-RU7">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                            <animations/>
+                            <inset key="titleEdgeInsets" minX="90" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="切换城市" image="btn_changeCity">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="clickChangCity:" destination="-1" eventType="touchUpInside" id="52l-ye-3oI"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="RnE-cM-B9w" firstAttribute="top" secondItem="vgj-hh-mGz" secondAttribute="top" id="RJ1-Zq-n2F"/>
+                        <constraint firstAttribute="trailing" secondItem="THQ-QE-RU7" secondAttribute="trailing" id="ahe-w0-XXn"/>
+                        <constraint firstItem="THQ-QE-RU7" firstAttribute="top" secondItem="vgj-hh-mGz" secondAttribute="top" id="cNH-dT-LSh"/>
+                        <constraint firstAttribute="height" constant="40" id="h3X-wK-jar"/>
+                        <constraint firstAttribute="trailing" secondItem="RnE-cM-B9w" secondAttribute="trailing" id="kzZ-nU-f3f"/>
+                        <constraint firstItem="THQ-QE-RU7" firstAttribute="leading" secondItem="vgj-hh-mGz" secondAttribute="leading" id="nnT-kv-Glc"/>
+                        <constraint firstAttribute="bottom" secondItem="THQ-QE-RU7" secondAttribute="bottom" id="zyt-dd-t6G"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ltV-uf-Wzy" userLabel="mainTableView">
+                    <rect key="frame" x="0.0" y="40" width="160" height="500"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Hs7-3Z-e89"/>
+                        <outlet property="delegate" destination="-1" id="5JC-KD-eyp"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7aC-iu-lAz" userLabel="subTableView">
+                    <rect key="frame" x="160" y="40" width="160" height="500"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="x5g-uU-jVo"/>
+                        <outlet property="delegate" destination="-1" id="R7W-5i-Wx2"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ltV-uf-Wzy" firstAttribute="leading" secondItem="xpU-7U-PCP" secondAttribute="leading" id="0lS-vu-dVM"/>
+                <constraint firstItem="7aC-iu-lAz" firstAttribute="width" secondItem="ltV-uf-Wzy" secondAttribute="width" id="2o5-do-gCu"/>
+                <constraint firstItem="vgj-hh-mGz" firstAttribute="leading" secondItem="xpU-7U-PCP" secondAttribute="leading" id="3Sj-iq-GbK"/>
+                <constraint firstItem="7aC-iu-lAz" firstAttribute="top" secondItem="vgj-hh-mGz" secondAttribute="bottom" id="85H-ej-aML"/>
+                <constraint firstAttribute="trailing" secondItem="vgj-hh-mGz" secondAttribute="trailing" id="8Ax-3S-9g6"/>
+                <constraint firstAttribute="bottom" secondItem="7aC-iu-lAz" secondAttribute="bottom" id="BnD-u5-zUR"/>
+                <constraint firstItem="7aC-iu-lAz" firstAttribute="leading" secondItem="ltV-uf-Wzy" secondAttribute="trailing" id="Mpp-PW-Rt1"/>
+                <constraint firstAttribute="bottom" secondItem="ltV-uf-Wzy" secondAttribute="bottom" id="OoD-fY-IKx"/>
+                <constraint firstItem="7aC-iu-lAz" firstAttribute="leading" secondItem="ltV-uf-Wzy" secondAttribute="trailing" id="WA1-nx-Kuf"/>
+                <constraint firstAttribute="trailing" secondItem="7aC-iu-lAz" secondAttribute="trailing" id="Zxf-sR-g1i"/>
+                <constraint firstItem="ltV-uf-Wzy" firstAttribute="top" secondItem="vgj-hh-mGz" secondAttribute="bottom" id="nnw-Tm-4Mv"/>
+                <constraint firstItem="vgj-hh-mGz" firstAttribute="top" secondItem="xpU-7U-PCP" secondAttribute="top" id="vlk-uW-2hw"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="317" y="395"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_changeCity" width="30" height="30"/>
+        <image name="icon_filter_arrow" width="16" height="16"/>
+    </resources>
+</document>

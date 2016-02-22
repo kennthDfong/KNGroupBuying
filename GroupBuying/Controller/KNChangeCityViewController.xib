@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KNChangeCityViewController">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="aye-CX-Xpb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="540"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ie7-Ml-OgG" userLabel="背景">
+                    <rect key="frame" x="0.0" y="0.0" width="400" height="60"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_navigationBar_normal" translatesAutoresizingMaskIntoConstraints="NO" id="MNz-02-Cri">
+                            <rect key="frame" x="0.0" y="0.0" width="400" height="60"/>
+                            <animations/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="城市列表" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cU-aG-NdA">
+                            <rect key="frame" x="60" y="0.0" width="340" height="60"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tW8-Vl-l1d">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="ez9-bb-JBm"/>
+                            </constraints>
+                            <state key="normal" image="btn_navigation_close"/>
+                            <state key="highlighted" image="btn_navigation_close_hl"/>
+                            <connections>
+                                <action selector="clickCloseButton:" destination="-1" eventType="touchUpInside" id="n1Y-vw-uam"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="7cU-aG-NdA" firstAttribute="leading" secondItem="tW8-Vl-l1d" secondAttribute="trailing" id="6uF-Bg-YC7"/>
+                        <constraint firstItem="tW8-Vl-l1d" firstAttribute="leading" secondItem="Ie7-Ml-OgG" secondAttribute="leading" id="BhA-Hp-bRE"/>
+                        <constraint firstAttribute="trailing" secondItem="MNz-02-Cri" secondAttribute="trailing" id="C68-HG-Kd0"/>
+                        <constraint firstAttribute="height" constant="60" id="InS-ta-cWv"/>
+                        <constraint firstItem="MNz-02-Cri" firstAttribute="top" secondItem="Ie7-Ml-OgG" secondAttribute="top" id="Zlc-7t-6TS"/>
+                        <constraint firstAttribute="trailing" secondItem="7cU-aG-NdA" secondAttribute="trailing" id="a4L-6L-t7t"/>
+                        <constraint firstItem="tW8-Vl-l1d" firstAttribute="top" secondItem="Ie7-Ml-OgG" secondAttribute="top" id="agO-av-mkf"/>
+                        <constraint firstItem="7cU-aG-NdA" firstAttribute="top" secondItem="Ie7-Ml-OgG" secondAttribute="top" id="arL-b6-B9j"/>
+                        <constraint firstAttribute="bottom" secondItem="7cU-aG-NdA" secondAttribute="bottom" id="bOp-cm-Opu"/>
+                        <constraint firstAttribute="bottom" secondItem="tW8-Vl-l1d" secondAttribute="bottom" id="bg7-Hr-Mm0"/>
+                        <constraint firstItem="MNz-02-Cri" firstAttribute="leading" secondItem="Ie7-Ml-OgG" secondAttribute="leading" id="i9f-Jn-wy0"/>
+                        <constraint firstAttribute="bottom" secondItem="MNz-02-Cri" secondAttribute="bottom" id="jhi-Ba-nI7"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tBD-2h-tkL">
+                    <rect key="frame" x="0.0" y="60" width="400" height="480"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="sze-Pw-RbU"/>
+                        <outlet property="delegate" destination="-1" id="xNB-yB-eNI"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Ie7-Ml-OgG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="CUT-9u-1d0"/>
+                <constraint firstAttribute="bottom" secondItem="tBD-2h-tkL" secondAttribute="bottom" id="LcM-dJ-fBq"/>
+                <constraint firstAttribute="trailing" secondItem="tBD-2h-tkL" secondAttribute="trailing" id="Nfk-PI-CwJ"/>
+                <constraint firstItem="tBD-2h-tkL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Z3L-SU-XVm"/>
+                <constraint firstItem="tBD-2h-tkL" firstAttribute="top" secondItem="Ie7-Ml-OgG" secondAttribute="bottom" id="bkf-Xt-H6j"/>
+                <constraint firstAttribute="trailing" secondItem="Ie7-Ml-OgG" secondAttribute="trailing" id="dF5-gg-Jon"/>
+                <constraint firstItem="Ie7-Ml-OgG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="w53-Nf-vaG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="350" y="337"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg_navigationBar_normal" width="124" height="124"/>
+        <image name="btn_navigation_close" width="30" height="30"/>
+        <image name="btn_navigation_close_hl" width="30" height="30"/>
+    </resources>
+</document>
